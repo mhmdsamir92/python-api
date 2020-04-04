@@ -46,7 +46,7 @@ class TestAPI(unittest.TestCase):
         self.assertEqual(response.json, {
             "add": 7,
             "mutiply": 10,
-            "substract": 2
+            "substract": 3
         })
 
 
