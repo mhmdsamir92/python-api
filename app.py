@@ -1,5 +1,5 @@
 from flask import Flask
-from utils import (add, multiply)
+from utils import (add, multiply, substract)
 
 app = Flask(__name__)
 
@@ -11,9 +11,11 @@ def index():
 def mathApi(num1, num2):
     addResult = add(num1, num2)
     multiplyResult = multiply(num1, num2)
+    substractResult = substract(num1, num2)
     return {
         "add": addResult,
-        "mutiply": multiplyResult
+        "mutiply": multiplyResult,
+        "substract": substractResult
     }, 200
 
 if __name__ == "__main__":
